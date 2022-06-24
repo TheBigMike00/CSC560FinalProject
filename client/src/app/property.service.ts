@@ -17,9 +17,9 @@ export class PropertyService {
     return this.http.get<Property[]>(this.ROOT_URL + '/getproperties');
   }
 
-  addProperties(neProperty:Property): Observable<any>
+  addProperties(newProperty:Property): Observable<any>
   {
-    return this.http.post<any>(this.ROOT_URL + '/addproperty', neProperty);
+    return this.http.post<any>(this.ROOT_URL + '/addproperty', newProperty);
   }
 
   deleteProperty(id:any): Observable<any>
